@@ -18,6 +18,7 @@
 		8FABF07C24B7293E003B87E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FABF07A24B7293E003B87E2 /* LaunchScreen.storyboard */; };
 		8FC4CE7624B8A5FF00042746 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */; };
 		8FFC03C724B8B12F0026991D /* Acme-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */; };
+		D23F307D24B9F799003F0C01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23F307C24B9F799003F0C01 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8FABF07D24B7293E003B87E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acme-Regular.ttf"; sourceTree = "<group>"; };
+		D23F307C24B9F799003F0C01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				8FABF07324B7293C003B87E2 /* ChatViewController.swift */,
 				8F9E983224B996C700F5A756 /* MessageCell.swift */,
 				8F9E983324B996C700F5A756 /* MessageCell.xib */,
+				D23F307C24B9F799003F0C01 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				8FC4CE7624B8A5FF00042746 /* WelcomeViewController.swift in Sources */,
 				8FABF07024B7293C003B87E2 /* AppDelegate.swift in Sources */,
 				8FABF07224B7293C003B87E2 /* SceneDelegate.swift in Sources */,
+				D23F307D24B9F799003F0C01 /* ViewController.swift in Sources */,
 				8F9E983124B9591800F5A756 /* StartupViewController.swift in Sources */,
 				8F9E983424B996C700F5A756 /* MessageCell.swift in Sources */,
 			);
