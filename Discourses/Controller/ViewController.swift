@@ -62,7 +62,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
            else{
                 cell.textLabel!.text = data[indexPath.row]
            }
-
+        cell.textLabel?.font = UIFont(name: "Acme-Regular", size: 30)
+        cell.textLabel?.textColor = UIColor(named: "BrandBackgroundColor")
+        
            return cell
        }
 
