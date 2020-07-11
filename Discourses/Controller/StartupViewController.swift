@@ -1,0 +1,56 @@
+//
+//  StartupViewController.swift
+//  Discourses
+//
+//  Created by Abhishek Marda on 7/11/20.
+//  Copyright © 2020 DiscoursesTeam. All rights reserved.
+//
+
+import UIKit
+
+class StartupViewController: UIViewController {
+
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var companyNameLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        companyNameLabel.alpha = 0
+        companyNameLabel.font = UIFont(name: "Acme-Regular", size: 30)
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (Timer) in
+            //do nothing
+        }
+        for i in 1...100 {
+            Timer.scheduledTimer(withTimeInterval: 0.008*Double(i), repeats: false) { (Timer) in
+                self.logoImage.layer.position.y = self.logoImage.layer.position.y - 1
+                self.companyNameLabel.alpha = CGFloat(i)
+                
+            }
+            if i==100{
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (Timer) in
+                    self.performSegue(withIdentifier: "startupToWelcome", sender: self)
+                }
+            }
+        }
+        
+        
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
