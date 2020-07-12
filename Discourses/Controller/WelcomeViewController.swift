@@ -16,6 +16,10 @@ class WelcomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        performSegue(withIdentifier: "welcomeToChat", sender: self)
+    }
 
     /*
     // MARK: - Navigation

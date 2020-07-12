@@ -15,20 +15,13 @@
                     <view key="view" contentMode="scaleToFill" id="Ba2-yC-vKI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9F-JS-UvP">
-                                <rect key="frame" x="115" y="446" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="welcomeToChat" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="L8B-X7-Wrg"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6KD-t1-292"/>
                     </view>
                     <navigationItem key="navigationItem" id="qOm-TG-sHK"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="welcomeToChat" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="xlp-I2-si8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDB-wl-rKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,17 +35,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-y0-XeS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-y0-XeS">
                                 <rect key="frame" x="0.0" y="126" width="414" height="609"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BrandForegroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="dmW-JU-0de">
-                                <rect key="frame" x="20" y="69" width="374" height="35"/>
+                                <rect key="frame" x="20" y="59" width="374" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndx-Hs-VQs">
-                                        <rect key="frame" x="0.0" y="0.0" width="41" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="41" id="pF6-Tl-TJO"/>
                                         </constraints>
@@ -62,14 +55,25 @@
                                             <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qzW-0x-u6p"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Psych 100A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7W-zt-Qfv">
-                                        <rect key="frame" x="107" y="0.0" width="160.5" height="35"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                        <color key="textColor" name="BrandForegroundColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hoh-1W-gjP">
+                                        <rect key="frame" x="107" y="0.0" width="160.5" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Psych 100A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7W-zt-Qfv">
+                                                <rect key="frame" x="0.0" y="0.0" width="160.5" height="35"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                <color key="textColor" name="BrandForegroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Professor Jack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNo-J6-4Wr">
+                                                <rect key="frame" x="0.0" y="35" width="160.5" height="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" name="BrandForegroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw3-d0-hQ4">
-                                        <rect key="frame" x="333.5" y="0.0" width="40.5" height="35"/>
+                                        <rect key="frame" x="333.5" y="0.0" width="40.5" height="55"/>
                                         <color key="tintColor" name="BrandForegroundColor"/>
                                         <state key="normal" image="line.horizontal.3" catalog="system"/>
                                     </button>
@@ -86,7 +90,7 @@
                         <color key="backgroundColor" name="BrandBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dmW-JU-0de" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U4M-SF-VAW"/>
-                            <constraint firstItem="dmW-JU-0de" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="a0U-0R-buA"/>
+                            <constraint firstItem="dmW-JU-0de" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="a0U-0R-buA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dmW-JU-0de" secondAttribute="trailing" constant="20" id="dX3-N0-pUd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -108,6 +112,8 @@
                         <outlet property="backButton" destination="Ndx-Hs-VQs" id="phZ-yX-FiT"/>
                         <outlet property="chatTable" destination="aeV-y0-XeS" id="QRK-Lp-Kgw"/>
                         <outlet property="inputField" destination="eI0-he-7XY" id="FRC-Nr-egg"/>
+                        <outlet property="menuButton" destination="Iw3-d0-hQ4" id="eia-kx-Li6"/>
+                        <outlet property="professorLabel" destination="QNo-J6-4Wr" id="cAu-G9-x9m"/>
                         <outlet property="subjectLabel" destination="c7W-zt-Qfv" id="CSK-rm-j1L"/>
                     </connections>
                 </viewController>
@@ -127,7 +133,7 @@
                                 <rect key="frame" x="153" y="402" width="108" height="92"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISCOURSES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2o-AT-Vti">
-                                <rect key="frame" x="154.5" y="437.5" width="105" height="21"/>
+                                <rect key="frame" x="154.5" y="467.5" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="BrandBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -135,10 +141,10 @@
                         </subviews>
                         <color key="backgroundColor" name="BrandForegroundColor"/>
                         <constraints>
+                            <constraint firstItem="K2o-AT-Vti" firstAttribute="centerY" secondItem="P8P-Z6-XkQ" secondAttribute="centerY" constant="30" id="0ID-DL-daJ"/>
                             <constraint firstItem="K2o-AT-Vti" firstAttribute="centerX" secondItem="P8P-Z6-XkQ" secondAttribute="centerX" id="Wfs-o1-aLy"/>
                             <constraint firstItem="Lsy-Zu-mnW" firstAttribute="centerY" secondItem="P8P-Z6-XkQ" secondAttribute="centerY" id="jiI-hX-Lro"/>
                             <constraint firstItem="Lsy-Zu-mnW" firstAttribute="centerX" secondItem="P8P-Z6-XkQ" secondAttribute="centerX" id="uH6-Q6-yWD"/>
-                            <constraint firstItem="K2o-AT-Vti" firstAttribute="centerY" secondItem="P8P-Z6-XkQ" secondAttribute="centerY" id="uW7-7y-cmQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UIt-Qg-AUN"/>
                     </view>

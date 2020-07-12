@@ -8,22 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		8F9E983124B9591800F5A756 /* StartupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9E983024B9591800F5A756 /* StartupViewController.swift */; };
-		8F9E983424B996C700F5A756 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9E983224B996C700F5A756 /* MessageCell.swift */; };
-		8F9E983524B996C700F5A756 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E983324B996C700F5A756 /* MessageCell.xib */; };
+		8F9E983F24B9CB6900F5A756 /* Cabin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E983624B9CB6600F5A756 /* Cabin-BoldItalic.ttf */; };
+		8F9E984024B9CB6900F5A756 /* Cabin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E983724B9CB6600F5A756 /* Cabin-MediumItalic.ttf */; };
+		8F9E984124B9CB6900F5A756 /* Cabin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E983824B9CB6700F5A756 /* Cabin-Bold.ttf */; };
+		8F9E984224B9CB6900F5A756 /* Cabin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E983924B9CB6700F5A756 /* Cabin-SemiBold.ttf */; };
+		8F9E984324B9CB6900F5A756 /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E983A24B9CB6700F5A756 /* Cabin-Italic.ttf */; };
+		8F9E984424B9CB6900F5A756 /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E983B24B9CB6800F5A756 /* Cabin-Medium.ttf */; };
+		8F9E984524B9CB6900F5A756 /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E983C24B9CB6800F5A756 /* Cabin-Regular.ttf */; };
+		8F9E984624B9CB6900F5A756 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E983D24B9CB6800F5A756 /* OFL.txt */; };
+		8F9E984724B9CB6900F5A756 /* Cabin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F9E983E24B9CB6900F5A756 /* Cabin-SemiBoldItalic.ttf */; };
 		8FABF07024B7293C003B87E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FABF06F24B7293C003B87E2 /* AppDelegate.swift */; };
 		8FABF07224B7293C003B87E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FABF07124B7293C003B87E2 /* SceneDelegate.swift */; };
 		8FABF07424B7293C003B87E2 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FABF07324B7293C003B87E2 /* ChatViewController.swift */; };
 		8FABF07724B7293C003B87E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FABF07524B7293C003B87E2 /* Main.storyboard */; };
 		8FABF07924B7293E003B87E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FABF07824B7293E003B87E2 /* Assets.xcassets */; };
 		8FABF07C24B7293E003B87E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FABF07A24B7293E003B87E2 /* LaunchScreen.storyboard */; };
+		8FB8224C24BACB2C000B4DBD /* ReceivedMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB8224A24BACB2C000B4DBD /* ReceivedMessageCell.swift */; };
+		8FB8224D24BACB2C000B4DBD /* ReceivedMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB8224B24BACB2C000B4DBD /* ReceivedMessageCell.xib */; };
 		8FC4CE7624B8A5FF00042746 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */; };
+		8FFA500824BA0C4800922D70 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA500724BA0C4800922D70 /* Message.swift */; };
 		8FFC03C724B8B12F0026991D /* Acme-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8F9E983024B9591800F5A756 /* StartupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupViewController.swift; sourceTree = "<group>"; };
-		8F9E983224B996C700F5A756 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
-		8F9E983324B996C700F5A756 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		8F9E983624B9CB6600F5A756 /* Cabin-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8F9E983724B9CB6600F5A756 /* Cabin-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-MediumItalic.ttf"; sourceTree = "<group>"; };
+		8F9E983824B9CB6700F5A756 /* Cabin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Bold.ttf"; sourceTree = "<group>"; };
+		8F9E983924B9CB6700F5A756 /* Cabin-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold.ttf"; sourceTree = "<group>"; };
+		8F9E983A24B9CB6700F5A756 /* Cabin-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Italic.ttf"; sourceTree = "<group>"; };
+		8F9E983B24B9CB6800F5A756 /* Cabin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Medium.ttf"; sourceTree = "<group>"; };
+		8F9E983C24B9CB6800F5A756 /* Cabin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular.ttf"; sourceTree = "<group>"; };
+		8F9E983D24B9CB6800F5A756 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		8F9E983E24B9CB6900F5A756 /* Cabin-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		8FABF06C24B7293C003B87E2 /* Discourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Discourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FABF06F24B7293C003B87E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FABF07124B7293C003B87E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +49,10 @@
 		8FABF07824B7293E003B87E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FABF07B24B7293E003B87E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FABF07D24B7293E003B87E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FB8224A24BACB2C000B4DBD /* ReceivedMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedMessageCell.swift; sourceTree = "<group>"; };
+		8FB8224B24BACB2C000B4DBD /* ReceivedMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceivedMessageCell.xib; sourceTree = "<group>"; };
 		8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		8FFA500724BA0C4800922D70 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acme-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +110,7 @@
 		8FC4CE7124B8A2FE00042746 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8FFA500724BA0C4800922D70 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,8 +121,8 @@
 				8F9E983024B9591800F5A756 /* StartupViewController.swift */,
 				8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */,
 				8FABF07324B7293C003B87E2 /* ChatViewController.swift */,
-				8F9E983224B996C700F5A756 /* MessageCell.swift */,
-				8F9E983324B996C700F5A756 /* MessageCell.xib */,
+				8FB8224A24BACB2C000B4DBD /* ReceivedMessageCell.swift */,
+				8FB8224B24BACB2C000B4DBD /* ReceivedMessageCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,6 +131,15 @@
 			isa = PBXGroup;
 			children = (
 				8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */,
+				8F9E983824B9CB6700F5A756 /* Cabin-Bold.ttf */,
+				8F9E983624B9CB6600F5A756 /* Cabin-BoldItalic.ttf */,
+				8F9E983A24B9CB6700F5A756 /* Cabin-Italic.ttf */,
+				8F9E983B24B9CB6800F5A756 /* Cabin-Medium.ttf */,
+				8F9E983724B9CB6600F5A756 /* Cabin-MediumItalic.ttf */,
+				8F9E983C24B9CB6800F5A756 /* Cabin-Regular.ttf */,
+				8F9E983924B9CB6700F5A756 /* Cabin-SemiBold.ttf */,
+				8F9E983E24B9CB6900F5A756 /* Cabin-SemiBoldItalic.ttf */,
+				8F9E983D24B9CB6800F5A756 /* OFL.txt */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -172,10 +202,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F9E983524B996C700F5A756 /* MessageCell.xib in Resources */,
+				8FB8224D24BACB2C000B4DBD /* ReceivedMessageCell.xib in Resources */,
+				8F9E984024B9CB6900F5A756 /* Cabin-MediumItalic.ttf in Resources */,
 				8FABF07C24B7293E003B87E2 /* LaunchScreen.storyboard in Resources */,
 				8FFC03C724B8B12F0026991D /* Acme-Regular.ttf in Resources */,
+				8F9E984324B9CB6900F5A756 /* Cabin-Italic.ttf in Resources */,
+				8F9E984524B9CB6900F5A756 /* Cabin-Regular.ttf in Resources */,
+				8F9E984424B9CB6900F5A756 /* Cabin-Medium.ttf in Resources */,
+				8F9E984724B9CB6900F5A756 /* Cabin-SemiBoldItalic.ttf in Resources */,
+				8F9E983F24B9CB6900F5A756 /* Cabin-BoldItalic.ttf in Resources */,
+				8F9E984624B9CB6900F5A756 /* OFL.txt in Resources */,
+				8F9E984124B9CB6900F5A756 /* Cabin-Bold.ttf in Resources */,
 				8FABF07924B7293E003B87E2 /* Assets.xcassets in Resources */,
+				8F9E984224B9CB6900F5A756 /* Cabin-SemiBold.ttf in Resources */,
 				8FABF07724B7293C003B87E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,8 +230,9 @@
 				8FC4CE7624B8A5FF00042746 /* WelcomeViewController.swift in Sources */,
 				8FABF07024B7293C003B87E2 /* AppDelegate.swift in Sources */,
 				8FABF07224B7293C003B87E2 /* SceneDelegate.swift in Sources */,
+				8FB8224C24BACB2C000B4DBD /* ReceivedMessageCell.swift in Sources */,
 				8F9E983124B9591800F5A756 /* StartupViewController.swift in Sources */,
-				8F9E983424B996C700F5A756 /* MessageCell.swift in Sources */,
+				8FFA500824BA0C4800922D70 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,20 +23,28 @@ class StartupViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (Timer) in
+        
+        
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (Timer) in
             //do nothing
         }
         for i in 1...100 {
-            Timer.scheduledTimer(withTimeInterval: 0.008*Double(i), repeats: false) { (Timer) in
-                self.logoImage.layer.position.y = self.logoImage.layer.position.y - 1
-                self.companyNameLabel.alpha = CGFloat(i)
-                
-            }
-            if i==100{
-                Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (Timer) in
-                    self.performSegue(withIdentifier: "startupToWelcome", sender: self)
+            DispatchQueue.main.async {
+                Timer.scheduledTimer(withTimeInterval: 0.01*Double(i), repeats: false) { (Timer) in
+                    self.logoImage.layer.position.y = self.logoImage.layer.position.y - 1
+                    self.logoImage.alpha = CGFloat(i)/100.0
+                    if i>50 {
+                        self.companyNameLabel.alpha = CGFloat(i-50)/50.0
+                    }
                 }
             }
+                
+                if i==100{
+                    Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (Timer) in
+                        self.performSegue(withIdentifier: "startupToWelcome", sender: self)
+                    }
+                }
+            
         }
         
         
