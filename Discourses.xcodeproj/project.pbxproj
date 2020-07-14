@@ -28,6 +28,7 @@
 		8FC4CE7624B8A5FF00042746 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */; };
 		8FFA500824BA0C4800922D70 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA500724BA0C4800922D70 /* Message.swift */; };
 		8FFC03C724B8B12F0026991D /* Acme-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */; };
+		D2846B6B24BC7EEE0029E611 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2846B6A24BC7EEE0029E611 /* KeyboardLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8FFA500724BA0C4800922D70 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acme-Regular.ttf"; sourceTree = "<group>"; };
+		D2846B6A24BC7EEE0029E611 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				8FABF07324B7293C003B87E2 /* ChatViewController.swift */,
 				8FB8224A24BACB2C000B4DBD /* ReceivedMessageCell.swift */,
 				8FB8224B24BACB2C000B4DBD /* ReceivedMessageCell.xib */,
+				D2846B6A24BC7EEE0029E611 /* KeyboardLayoutConstraint.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				8FABF07024B7293C003B87E2 /* AppDelegate.swift in Sources */,
 				8FABF07224B7293C003B87E2 /* SceneDelegate.swift in Sources */,
 				8FB8224C24BACB2C000B4DBD /* ReceivedMessageCell.swift in Sources */,
+				D2846B6B24BC7EEE0029E611 /* KeyboardLayoutConstraint.swift in Sources */,
 				8F9E983124B9591800F5A756 /* StartupViewController.swift in Sources */,
 				8FFA500824BA0C4800922D70 /* Message.swift in Sources */,
 			);

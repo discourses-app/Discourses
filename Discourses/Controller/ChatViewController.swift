@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var chatTable: UITableView!
@@ -22,13 +22,81 @@ class ChatViewController: UIViewController {
         Message(from: "Jonathon", on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: "I'm doing well, how about yourself?"),
         Message(from: "Janardhan", on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: "Did you ever hear the Tragedy of Wise? I thought not, it's not a story the Jedi would tell you. It's a sith legend. Darth Plageuis was a dark lord of the sith. He was so powerful and wise...")
     ]
-    
+   
     var sender : String = "Janardhan"
+    var X : CGFloat = 0.0
+    var Y : CGFloat = 0.0
+    var tableWidth : CGFloat = 0.0
+    var tableHeight : CGFloat = 0.0
+    var keyboardHeight : CGFloat = 346.0 //for iPhone 11
+    var flag : Int = 0 //just trust me on why we need this
     
+    func scrollToBottom(){
+        DispatchQueue.main.async {
+           
+            let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
+            self.chatTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+    
+//    @objc
+//    private func handle(keyboardShowNotification notification: Notification) {
+//        // 1
+//        print("Keyboard show notification")
+//
+//        // 2
+//        if let userInfo = notification.userInfo,
+//            // 3
+//          let keyboardRectangle = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+//            if flag == 0 {
+//          print(keyboardRectangle.height)
+//          tableWidth = chatTable.frame.width
+//          tableHeight = chatTable.frame.height
+//          X = chatTable.frame.minX
+//          Y = chatTable.frame.minY
+//          keyboardHeight = keyboardRectangle.height
+//                print("This is height!")
+//                print(keyboardHeight)
+//          chatTable.frame = CGRect(x: X, y: Y, width: tableWidth, height: tableHeight - keyboardHeight)
+//          scrollToBottom()
+//          flag = 1;
+//            }
+//        }
+//    }
+    //ABOVE CODE USEFUL TO FIND KEYBOARD HEIGH ANEW FOR NEW PHONE SIZES
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        chatTable.frame = CGRect(x: X, y: Y, width: tableWidth, height: tableHeight)
+        scrollToBottom()
+        flag = 0
+        return false
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if flag == 0 {
+              tableWidth = chatTable.frame.width
+              tableHeight = chatTable.frame.height
+              X = chatTable.frame.minX
+              Y = chatTable.frame.minY
+                    print("This is height!")
+                    print(keyboardHeight)
+              chatTable.frame = CGRect(x: X, y: Y, width: tableWidth, height: tableHeight - keyboardHeight)
+              scrollToBottom()
+              flag = 1;
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        inputField.delegate = self
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//      NotificationCenter.default.addObserver(self, selector: #selector(handle(keyboardShowNotification:)),
+//     name: UIResponder.keyboardDidShowNotification, object: nil)
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//THE ABOVE CODE CAN BE USED FOR KEYBAORD DETECTION ON SCREEN (handle lets us find keyboard Height for different phone screens)
+        
         //subject label set up
         subjectLabel.font = UIFont(name: "Acme-Regular", size: 30)
         subjectLabel.text = subjectLabel.text?.uppercased()

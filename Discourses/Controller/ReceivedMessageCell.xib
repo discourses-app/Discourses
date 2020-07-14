@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f6Y-G1-ScF" userLabel="Message Stack View">
-                                <rect key="frame" x="50" y="0.0" width="78" height="84.5"/>
+                                <rect key="frame" x="50" y="0.0" width="77" height="84.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-pK-ljk">
                                         <rect key="frame" x="10" y="0.0" width="28.5" height="13.5"/>
@@ -37,10 +37,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-tz-Odj" userLabel="Message View">
-                                        <rect key="frame" x="10" y="23.5" width="58" height="61"/>
+                                        <rect key="frame" x="10" y="23.5" width="57" height="61"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXV-ks-Vhw" userLabel="Message Text">
-                                                <rect key="frame" x="10" y="10" width="38" height="41"/>
+                                                <rect key="frame" x="10" y="10" width="37" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="MessageColorBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tau-5v-0ha" userLabel="Buffer View">
-                                <rect key="frame" x="138" y="0.0" width="343" height="60"/>
+                                <rect key="frame" x="137" y="0.0" width="344" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="waL-6q-bce"/>

@@ -42,7 +42,7 @@
                                 <color key="sectionIndexBackgroundColor" name="BrandForegroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="dmW-JU-0de">
-                                <rect key="frame" x="20" y="59" width="374" height="55"/>
+                                <rect key="frame" x="20" y="59" width="354.5" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndx-Hs-VQs">
                                         <rect key="frame" x="0.0" y="0.0" width="41" height="55"/>
@@ -71,17 +71,36 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="c7W-zt-Qfv" secondAttribute="trailing" id="2jt-q1-swm"/>
+                                            <constraint firstAttribute="trailing" secondItem="QNo-J6-4Wr" secondAttribute="trailing" id="BG0-nK-mOX"/>
+                                            <constraint firstAttribute="trailing" secondItem="c7W-zt-Qfv" secondAttribute="trailing" id="DVU-fN-TXU"/>
+                                            <constraint firstItem="QNo-J6-4Wr" firstAttribute="top" secondItem="c7W-zt-Qfv" secondAttribute="bottom" id="JSU-mi-GpW"/>
+                                            <constraint firstItem="c7W-zt-Qfv" firstAttribute="leading" secondItem="hoh-1W-gjP" secondAttribute="leading" id="Ner-NX-NcY"/>
+                                            <constraint firstItem="c7W-zt-Qfv" firstAttribute="top" secondItem="hoh-1W-gjP" secondAttribute="top" id="a4l-J0-nOa"/>
+                                            <constraint firstItem="QNo-J6-4Wr" firstAttribute="leading" secondItem="hoh-1W-gjP" secondAttribute="leading" id="drL-cO-v6n"/>
+                                            <constraint firstAttribute="bottom" secondItem="QNo-J6-4Wr" secondAttribute="bottom" id="iQY-QZ-9Nd"/>
+                                            <constraint firstItem="QNo-J6-4Wr" firstAttribute="top" secondItem="c7W-zt-Qfv" secondAttribute="bottom" id="mUx-N8-76D"/>
+                                            <constraint firstItem="c7W-zt-Qfv" firstAttribute="leading" secondItem="hoh-1W-gjP" secondAttribute="leading" id="rQA-8S-Rgc"/>
+                                            <constraint firstItem="c7W-zt-Qfv" firstAttribute="top" secondItem="hoh-1W-gjP" secondAttribute="top" id="uV3-M7-Ocx"/>
+                                            <constraint firstItem="QNo-J6-4Wr" firstAttribute="top" secondItem="c7W-zt-Qfv" secondAttribute="bottom" id="v5L-2Q-BrQ"/>
+                                        </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iw3-d0-hQ4">
-                                        <rect key="frame" x="333.5" y="0.0" width="40.5" height="55"/>
+                                        <rect key="frame" x="333.5" y="0.0" width="21" height="55"/>
                                         <color key="tintColor" name="BrandForegroundColor"/>
                                         <state key="normal" image="line.horizontal.3" catalog="system"/>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="hoh-1W-gjP" firstAttribute="leading" secondItem="Ndx-Hs-VQs" secondAttribute="trailing" constant="66" id="FRd-x8-PJs"/>
+                                    <constraint firstItem="Iw3-d0-hQ4" firstAttribute="leading" secondItem="hoh-1W-gjP" secondAttribute="trailing" constant="66" id="k2A-Bo-USQ"/>
+                                    <constraint firstItem="hoh-1W-gjP" firstAttribute="top" secondItem="dmW-JU-0de" secondAttribute="top" id="lBp-fE-3JJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iw3-d0-hQ4" secondAttribute="trailing" id="vv2-pK-ywN"/>
+                                </constraints>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    Type here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eI0-he-7XY">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    Type here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eI0-he-7XY">
                                 <rect key="frame" x="20" y="788" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -89,9 +108,12 @@
                         </subviews>
                         <color key="backgroundColor" name="BrandBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dmW-JU-0de" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="U4M-SF-VAW"/>
-                            <constraint firstItem="dmW-JU-0de" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="a0U-0R-buA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dmW-JU-0de" secondAttribute="trailing" constant="20" id="dX3-N0-pUd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eI0-he-7XY" secondAttribute="bottom" constant="40" id="1m8-0I-6mw" customClass="KeyboardLayoutConstraint" customModule="Discourses" customModuleProvider="target"/>
+                            <constraint firstItem="dmW-JU-0de" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QmR-Lv-cmK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eI0-he-7XY" secondAttribute="trailing" constant="20" id="WWG-gi-cr8"/>
+                            <constraint firstItem="dmW-JU-0de" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="bNx-F7-REF"/>
+                            <constraint firstItem="eI0-he-7XY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bt4-WU-g7Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dmW-JU-0de" secondAttribute="trailing" constant="39.5" id="sTe-oP-Ews"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
