@@ -67,7 +67,10 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        chatTable.frame = CGRect(x: X, y: Y, width: tableWidth, height: tableHeight)
+        UIView.animate(withDuration: 0.3) {
+            self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight)
+        }
+        
         scrollToBottom()
         flag = 0
         return false
@@ -81,7 +84,9 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
               Y = chatTable.frame.minY
                     print("This is height!")
                     print(keyboardHeight)
-              chatTable.frame = CGRect(x: X, y: Y, width: tableWidth, height: tableHeight - keyboardHeight)
+            UIView.animate(withDuration: 0.3) {
+                self.chatTable.frame = CGRect(x: self.X, y: self.Y, width: self.tableWidth, height: self.tableHeight - self.keyboardHeight)
+            }
               scrollToBottom()
               flag = 1;
         }
