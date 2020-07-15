@@ -20,12 +20,75 @@
                     </view>
                     <navigationItem key="navigationItem" id="qOm-TG-sHK"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="welcomeToChat" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="xlp-I2-si8"/>
+                        <segue destination="51l-Wf-4RT" kind="presentation" identifier="welcomeToClasslist" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="kUN-vM-ocb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDB-wl-rKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="197.10144927536234" y="91.741071428571431"/>
+        </scene>
+        <!--Subscribed Classes View Controller-->
+        <scene sceneID="uxt-Sm-wth">
+            <objects>
+                <viewController id="51l-Wf-4RT" customClass="SubscribedClassesViewController" customModule="Discourses" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2wQ-Xq-HAz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-fL-5gz">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <color key="backgroundColor" name="ClassLIstForegroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="L6u-Zh-qdf">
+                                <rect key="frame" x="20" y="84" width="374" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Courses" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsu-dx-meF">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="40"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <color key="textColor" name="ClassLIstForegroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9v2-Gg-lgn">
+                                        <rect key="frame" x="299" y="0.0" width="30" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="V3p-Q7-LfP"/>
+                                            <constraint firstAttribute="height" constant="40" id="oWb-CL-Rza"/>
+                                        </constraints>
+                                        <state key="normal" image="ChatButtonIcon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBB-3t-Uf2">
+                                        <rect key="frame" x="354" y="0.0" width="20" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Azl-Pu-XOy"/>
+                                            <constraint firstAttribute="height" constant="40" id="ISi-OF-uWT"/>
+                                        </constraints>
+                                        <state key="normal" image="ThreeLines"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="ClassListBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rfG-o5-xhS" firstAttribute="trailing" secondItem="L6u-Zh-qdf" secondAttribute="trailing" constant="20" id="FKO-Bh-B0K"/>
+                            <constraint firstAttribute="bottom" secondItem="IuK-fL-5gz" secondAttribute="bottom" id="I1f-sX-HNu"/>
+                            <constraint firstItem="IuK-fL-5gz" firstAttribute="top" secondItem="L6u-Zh-qdf" secondAttribute="bottom" constant="20" id="M1b-iL-m4B"/>
+                            <constraint firstItem="L6u-Zh-qdf" firstAttribute="top" secondItem="rfG-o5-xhS" secondAttribute="top" constant="40" id="OId-Xg-6no"/>
+                            <constraint firstItem="L6u-Zh-qdf" firstAttribute="leading" secondItem="rfG-o5-xhS" secondAttribute="leading" constant="20" id="gkc-dX-I0L"/>
+                            <constraint firstItem="IuK-fL-5gz" firstAttribute="leading" secondItem="rfG-o5-xhS" secondAttribute="leading" id="hqX-pl-OVa"/>
+                            <constraint firstItem="IuK-fL-5gz" firstAttribute="trailing" secondItem="rfG-o5-xhS" secondAttribute="trailing" id="suu-4Y-WNA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rfG-o5-xhS"/>
+                    </view>
+                    <connections>
+                        <outlet property="addChatButton" destination="9v2-Gg-lgn" id="dNA-ow-NrH"/>
+                        <outlet property="classListTable" destination="IuK-fL-5gz" id="PhN-xN-9St"/>
+                        <outlet property="myCoursesLabel" destination="Vsu-dx-meF" id="0js-vN-bcm"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="classlistToChat" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="L2G-Dw-DDW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfm-6U-WcC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="92"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -119,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="92.410714285714278"/>
+            <point key="canvasLocation" x="1748" y="92"/>
         </scene>
         <!--Startup View Controller-->
         <scene sceneID="HQ7-2C-4s2">
@@ -161,6 +224,8 @@
     </scenes>
     <resources>
         <image name="BrandColoredLogo" width="107.5" height="91.5"/>
+        <image name="ChatButtonIcon" width="28" height="25"/>
+        <image name="ThreeLines" width="17" height="16"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <namedColor name="BrandBackgroundColor">
@@ -168,6 +233,12 @@
         </namedColor>
         <namedColor name="BrandForegroundColor">
             <color red="0.94900000095367432" green="0.93699997663497925" blue="0.875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ClassLIstForegroundColor">
+            <color red="0.94901960784313721" green="0.93725490196078431" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ClassListBackgroundColor">
+            <color red="0.10980392156862745" green="0.22745098039215686" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

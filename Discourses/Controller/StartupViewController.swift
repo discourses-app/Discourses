@@ -16,7 +16,7 @@ class StartupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         companyNameLabel.alpha = 0
-        companyNameLabel.font = UIFont(name: "Acme-Regular", size: 30)
+        companyNameLabel.font = UIFont(name: "Acme-Regular", size: 50)
         
         // Do any additional setup after loading the view.
     }
@@ -41,13 +41,16 @@ class StartupViewController: UIViewController {
                 
                 if i==100{
                     Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (Timer) in
-                        self.performSegue(withIdentifier: "startupToWelcome", sender: self)
+                        self.performSegue(withIdentifier: Constants.Segues.startupVCToWelcomeVC, sender: self)
                     }
                 }
             
         }
         
-        
+//        UIFont.familyNames.forEach({ familyName in
+//            let fontNames = UIFont.fontNames(forFamilyName: familyName)
+//            print(familyName, fontNames)
+//        })
     }
     
 

@@ -18,7 +18,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        performSegue(withIdentifier: "welcomeToChat", sender: self)
+        performSegue(withIdentifier: Constants.Segues.welcomeVCToClassListVC, sender: self)
     }
 
     /*

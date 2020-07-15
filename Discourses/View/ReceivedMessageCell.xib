@@ -10,15 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceiveMessageIdentifier" rowHeight="110" id="KGk-i7-Jjw" customClass="ReceivedMessageCell" customModule="Discourses" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="501" height="110"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCellIdentifier" rowHeight="116" id="KGk-i7-Jjw" customClass="ReceivedMessageCell" customModule="Discourses" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="518" height="116"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="501" height="110"/>
+                <rect key="frame" x="0.0" y="0.0" width="518" height="116"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ewe-KL-ABh">
-                        <rect key="frame" x="10" y="10" width="481" height="90"/>
+                        <rect key="frame" x="10" y="10" width="498" height="96"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiscoursesLogo" translatesAutoresizingMaskIntoConstraints="NO" id="prX-sL-TCS" userLabel="Profile Image">
                                 <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -28,7 +28,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f6Y-G1-ScF" userLabel="Message Stack View">
-                                <rect key="frame" x="50" y="0.0" width="78" height="84.5"/>
+                                <rect key="frame" x="50" y="0.0" width="77" height="84.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-pK-ljk">
                                         <rect key="frame" x="10" y="0.0" width="28.5" height="13.5"/>
@@ -37,10 +37,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-tz-Odj" userLabel="Message View">
-                                        <rect key="frame" x="10" y="23.5" width="58" height="61"/>
+                                        <rect key="frame" x="10" y="23.5" width="57" height="61"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXV-ks-Vhw" userLabel="Message Text">
-                                                <rect key="frame" x="10" y="10" width="38" height="41"/>
+                                                <rect key="frame" x="10" y="10" width="37" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="MessageColorBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tau-5v-0ha" userLabel="Buffer View">
-                                <rect key="frame" x="138" y="0.0" width="343" height="60"/>
+                                <rect key="frame" x="137" y="0.0" width="361" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="waL-6q-bce"/>
@@ -87,7 +87,7 @@
                 <outlet property="profileImage" destination="prX-sL-TCS" id="s0x-ax-kt1"/>
                 <outlet property="senderText" destination="mbT-pK-ljk" id="ZlP-7s-fbo"/>
             </connections>
-            <point key="canvasLocation" x="393.47826086956525" y="129.24107142857142"/>
+            <point key="canvasLocation" x="405.79710144927537" y="131.25"/>
         </tableViewCell>
     </objects>
     <resources>

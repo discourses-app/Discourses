@@ -39,7 +39,7 @@ class ChatViewController: UIViewController {
         
         //chat table view set up
         chatTable.layer.cornerRadius = 40
-        chatTable.register(UINib(nibName: "ReceivedMessageCell", bundle: nil), forCellReuseIdentifier: "ReceiveMessageIdentifier")
+        chatTable.register(UINib(nibName: Constants.CellStructNames.messageCell, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.messageCell)
         chatTable.delegate = self
         chatTable.dataSource = self
 
@@ -97,7 +97,7 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiveMessageIdentifier") as! ReceivedMessageCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
         cell.messageContent.text = messages[indexPath.row].content
         cell.profileImage.image = #imageLiteral(resourceName: "DiscoursesLogo")
         cell.senderText.text = messages[indexPath.row].sender
