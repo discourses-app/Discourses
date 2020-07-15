@@ -16,6 +16,9 @@
 		8FABF07724B7293C003B87E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FABF07524B7293C003B87E2 /* Main.storyboard */; };
 		8FABF07924B7293E003B87E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FABF07824B7293E003B87E2 /* Assets.xcassets */; };
 		8FABF07C24B7293E003B87E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FABF07A24B7293E003B87E2 /* LaunchScreen.storyboard */; };
+		8FB32B3F24BF3B69002B10C0 /* ChatSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB32B3D24BF3B69002B10C0 /* ChatSearchCell.swift */; };
+		8FB32B4024BF3B69002B10C0 /* ChatSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB32B3E24BF3B69002B10C0 /* ChatSearchCell.xib */; };
+		8FB32B4224BF4507002B10C0 /* ClassSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB32B4124BF4507002B10C0 /* ClassSearchViewController.swift */; };
 		8FC4CE7624B8A5FF00042746 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */; };
 		8FFC03C724B8B12F0026991D /* Acme-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */; };
 		D23F307D24B9F799003F0C01 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23F307C24B9F799003F0C01 /* ViewController.swift */; };
@@ -33,6 +36,9 @@
 		8FABF07824B7293E003B87E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FABF07B24B7293E003B87E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FABF07D24B7293E003B87E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FB32B3D24BF3B69002B10C0 /* ChatSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSearchCell.swift; sourceTree = "<group>"; };
+		8FB32B3E24BF3B69002B10C0 /* ChatSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatSearchCell.xib; sourceTree = "<group>"; };
+		8FB32B4124BF4507002B10C0 /* ClassSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassSearchViewController.swift; sourceTree = "<group>"; };
 		8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acme-Regular.ttf"; sourceTree = "<group>"; };
 		D23F307C24B9F799003F0C01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +77,8 @@
 				8FABF06F24B7293C003B87E2 /* AppDelegate.swift */,
 				8FABF07124B7293C003B87E2 /* SceneDelegate.swift */,
 				8FABF07524B7293C003B87E2 /* Main.storyboard */,
+				8FB32B3D24BF3B69002B10C0 /* ChatSearchCell.swift */,
+				8FB32B3E24BF3B69002B10C0 /* ChatSearchCell.xib */,
 				8FC4CE7124B8A2FE00042746 /* Model */,
 				8FC4CE7024B8A2F100042746 /* View */,
 				8FC4CE7224B8A31100042746 /* Controller */,
@@ -105,6 +113,7 @@
 				8F9E983224B996C700F5A756 /* MessageCell.swift */,
 				8F9E983324B996C700F5A756 /* MessageCell.xib */,
 				D23F307C24B9F799003F0C01 /* ViewController.swift */,
+				8FB32B4124BF4507002B10C0 /* ClassSearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +189,7 @@
 				8FFC03C724B8B12F0026991D /* Acme-Regular.ttf in Resources */,
 				8FABF07924B7293E003B87E2 /* Assets.xcassets in Resources */,
 				8FABF07724B7293C003B87E2 /* Main.storyboard in Resources */,
+				8FB32B4024BF3B69002B10C0 /* ChatSearchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,8 +205,10 @@
 				8FABF07024B7293C003B87E2 /* AppDelegate.swift in Sources */,
 				8FABF07224B7293C003B87E2 /* SceneDelegate.swift in Sources */,
 				D23F307D24B9F799003F0C01 /* ViewController.swift in Sources */,
+				8FB32B3F24BF3B69002B10C0 /* ChatSearchCell.swift in Sources */,
 				8F9E983124B9591800F5A756 /* StartupViewController.swift in Sources */,
 				8F9E983424B996C700F5A756 /* MessageCell.swift in Sources */,
+				8FB32B4224BF4507002B10C0 /* ClassSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
