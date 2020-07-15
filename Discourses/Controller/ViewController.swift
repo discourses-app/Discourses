@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var data:[String] = ["Dev","Hiren","Bhagyashree","Himanshu","Manisha","Trupti","Prashant","Kishor","Jignesh","Rushi"]
+    var data:[String] = ["PSYCH 100A","PSYCH 100A","PSYCH 100A","PSYCH 100A","PSYCH 100B","PSYCH 100C","PSYCH 100D","Kishor","Jignesh","Rushi"]
     var filterdata:[String]!
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -53,17 +53,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //trial commit
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let newLabel = UILabel(frame: CGRect(x: 300, y: 10, width: 200, height: 50))
+        newLabel.text = "4:20 PM"
+        newLabel.textColor = #colorLiteral(red: 0.1098039216, green: 0.2274509804, blue: 0.337254902, alpha: 1)
+        newLabel.font = UIFont(name: "Acme-Regular", size: 15)
+        newLabel.tag = 1
+        newLabel.preferredMaxLayoutWidth = 40
+        cell.contentView.addSubview(newLabel)
+        cell.layer.cornerRadius = 20
+        cell.frame = cell.frame.offsetBy(dx: 50, dy: 50)
+        
            cell.backgroundColor = #colorLiteral(red: 0.9490196078, green: 0.937254902, blue: 0.8745098039, alpha: 1)
 
            if filterdata.count != 0
            {
                cell.textLabel!.text = filterdata[indexPath.row]
+            cell.textLabel?.textAlignment = .center
            }
            else{
                 cell.textLabel!.text = data[indexPath.row]
+              cell.textLabel?.textAlignment = .center
            }
         cell.textLabel?.font = UIFont(name: "Acme-Regular", size: 30)
         cell.textLabel?.textColor = UIColor(named: "BrandBackgroundColor")
+        
         
            return cell
        }

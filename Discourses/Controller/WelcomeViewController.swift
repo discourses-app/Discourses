@@ -15,6 +15,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var pwdText: UITextField!
+    
     @IBOutlet weak var signUpBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,10 @@ class WelcomeViewController: UIViewController {
         
         pwdText.layer.masksToBounds = true
         usernameText.layer.masksToBounds = true
-        
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
+//        usernameText.resignFirstResponder()
+//        pwdText.resignFirstResponder()
         // Do any additional setup after loading the view.
     }
     
