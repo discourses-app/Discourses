@@ -2,7 +2,7 @@
 //  ChatViewController.swift
 //  Discourses
 //
-//  Created by Abhishek Marda on 7/9/20.
+//  Created by Aritra Mullick on 7/9/20.
 //  Copyright © 2020 DiscoursesTeam. All rights reserved.
 //
 
