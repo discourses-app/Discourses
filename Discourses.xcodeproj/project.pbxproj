@@ -39,6 +39,7 @@
 		8FC4CE7624B8A5FF00042746 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */; };
 		8FFA500824BA0C4800922D70 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA500724BA0C4800922D70 /* Message.swift */; };
 		8FFC03C724B8B12F0026991D /* Acme-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */; };
+		8FFC6CE024C0358700A41B95 /* UIImage-ResizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CDF24C0358600A41B95 /* UIImage-ResizeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		8FC4CE7524B8A5FF00042746 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8FFA500724BA0C4800922D70 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acme-Regular.ttf"; sourceTree = "<group>"; };
+		8FFC6CDF24C0358600A41B95 /* UIImage-ResizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-ResizeExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			children = (
 				8FFA500724BA0C4800922D70 /* Message.swift */,
 				8FBBD21A24BF0D13001ACA81 /* ClassModel.swift */,
+				8FFC6CDF24C0358600A41B95 /* UIImage-ResizeExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				8FBBD21924BF0964001ACA81 /* Constants.swift in Sources */,
 				8FABF07224B7293C003B87E2 /* SceneDelegate.swift in Sources */,
 				8FB8224C24BACB2C000B4DBD /* ReceivedMessageCell.swift in Sources */,
+				8FFC6CE024C0358700A41B95 /* UIImage-ResizeExtension.swift in Sources */,
 				8F9E983124B9591800F5A756 /* StartupViewController.swift in Sources */,
 				8FFA500824BA0C4800922D70 /* Message.swift in Sources */,
 			);

@@ -12,6 +12,7 @@ class SubscribedClassesViewController: UIViewController {
     @IBOutlet weak var myCoursesLabel: UILabel!
     @IBOutlet weak var addChatButton: UIButton!
     @IBOutlet weak var classListTable: UITableView!
+    @IBOutlet weak var threeLinesImage: UIButton!
     
     let bubbleBgColors : [UIColor] = [
         UIColor(named: "BubbleColor1")!,
@@ -39,9 +40,22 @@ class SubscribedClassesViewController: UIViewController {
         classListTable.layer.cornerRadius = 43
         classListTable.register(UINib(nibName: Constants.CellStructNames.classBubble, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.classBubble)
         
+//        threeLinesImage.frame = CGRect(
+//            x: threeLinesImage.layer.position.x,
+//            y: threeLinesImage.layer.position.y,
+//            width: threeLinesImage.frame.width,
+//            height: threeLinesImage.frame.height + 10)
+//        threeLinesImage.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//        threeLinesImage.layer.masksToBounds = true
+//        threeLinesImage.sizeToFit()
+        let image = #imageLiteral(resourceName: "ThreeLines").resized(to: CGSize(width: 25, height: 22))
+        threeLinesImage.setImage(image, for: .normal)
+        
+//        threeLinesImage.setImage(., for: .normal)
         //label set up
         myCoursesLabel.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 36)
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -93,3 +107,4 @@ extension SubscribedClassesViewController : UITableViewDataSource {
     
     
 }
+

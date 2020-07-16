@@ -14,24 +14,30 @@ class ReceivedMessageCell: UITableViewCell {
     @IBOutlet weak var messageBackground: UIView!
     @IBOutlet weak var senderText: UILabel!
     @IBOutlet weak var bufferView: UIView!
+    @IBOutlet weak var leftBufferView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         profileImage.layer.cornerRadius = profileImage.frame.size.height / 2
         
-        messageBackground.layer.cornerRadius = messageBackground.frame.size.height / 5
+        messageBackground.layer.cornerRadius = 20
         messageBackground.layer.masksToBounds = false
+        /*
+            The code below is in cade you want a shadow to your message
         messageBackground.layer.shadowColor = UIColor.black.cgColor
         messageBackground.layer.shadowOpacity = 0.1
         messageBackground.layer.shadowOffset = CGSize(width: 1.5, height: 5)
         messageBackground.layer.shadowRadius = 1
+        */
         messageBackground.layer.shouldRasterize = true
         messageBackground.layer.rasterizationScale = true ? UIScreen.main.scale : 1
 
         
         messageContent.font = UIFont(name: "Cabin-Regular", size: 19)
         messageContent.textColor = hexStringToUIColor(hex: "#1C3A56")
+        
+        
         senderText.font = UIFont(name: "Cabin-Regular", size: 13)
         
         

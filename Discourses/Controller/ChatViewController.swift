@@ -18,9 +18,36 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var professorLabel: UILabel!
     
     var messages : [Message] = [
-        Message(from: "Janardhan", on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: "Hi, how are you jonathon"),
-        Message(from: "Jonathon", on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: "I'm doing well, how about yourself?"),
-        Message(from: "Janardhan", on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate), withMessage: "Did you ever hear the Tragedy of Wise? I thought not, it's not a story the Jedi would tell you. It's a sith legend. Darth Plageuis was a dark lord of the sith. He was so powerful and wise...")
+        Message(
+            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
+            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            withMessage: "Hi, how are you jonathon"
+        ),
+        Message(
+            from: Sender(withName: "Jonathon", withProfilePic: #imageLiteral(resourceName: "DiscoursesLogo")),
+            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            withMessage: "I'm doing well, how about yourself?"
+        ),
+        Message(
+            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
+            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            withMessage: "Did you ever hear the Tragedy of Wise? I thought not, it's not a story the Jedi would tell you. It's a sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life... He had such a knowledge of the dark side that he could even keep the ones he cared about from dying."
+        ),
+        Message(
+            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
+            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            withMessage: "Okay..."
+        ),
+        Message(
+            from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
+            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            withMessage: "The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful... the only thing he was afraid of was losing his power, which eventually, of course, he did. "
+        ),
+        Message(
+            from: Sender(withName: "Chamiya", withProfilePic: #imageLiteral(resourceName: "NoBgLogo")),
+            on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
+            withMessage: "Bro I'm begging you pls stop"
+        )
     ]
     
     var sender : String = "Janardhan"
@@ -56,11 +83,9 @@ class ChatViewController: UIViewController {
         
         
         //menu button set up
+        let menuimage = #imageLiteral(resourceName: "ThreeLines").resized(to: CGSize(width: 25, height: 20))
         menuButton.setImage(
-            UIImage(
-                systemName: "line.horizontal.3",
-                withConfiguration: UIImage.SymbolConfiguration(pointSize: 30)
-            ),
+            menuimage,
             for: .normal
         )
         
@@ -68,12 +93,14 @@ class ChatViewController: UIViewController {
         backButton.setImage(
             UIImage(
                 systemName: "arrow.left",
-                withConfiguration: UIImage.SymbolConfiguration(pointSize: 20)
+                withConfiguration: UIImage.SymbolConfiguration(pointSize: 30)
             ),
             for: .normal
         )
         
     }
+    
+    //MARK: - Button actions
     
     @IBAction func attachmentButtonPressed(_ sender: UIButton){
         print("hello")
@@ -85,33 +112,16 @@ class ChatViewController: UIViewController {
         }
     }
     
-}
-
-extension ChatViewController: UITableViewDelegate {
+    //MARK: - Helpers
     
-}
-
-extension ChatViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        messages.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
-        cell.messageContent.text = messages[indexPath.row].content
-        cell.profileImage.image = #imageLiteral(resourceName: "DiscoursesLogo")
-        cell.senderText.text = messages[indexPath.row].sender
-        
-        if messages[indexPath.row].sender == sender {
-            cell.bufferView.isHidden = true
-            cell.messageBackground.backgroundColor = hexStringToUIColor(hex: "#3782A4")
-            cell.profileImage.alpha = 0
-            cell.senderText.isHidden = true
-            cell.messageContent.textColor = hexStringToUIColor(hex: "#FCFAF3")
+    func scrollToBottom(){
+        DispatchQueue.main.async {
+           
+            let indexPath = IndexPath(row:  self.chatTable.numberOfRows(inSection: 0) - 1, section: 0)
+            self.chatTable.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
-        return cell
     }
-    
     
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
@@ -134,6 +144,37 @@ extension ChatViewController: UITableViewDataSource {
             alpha: CGFloat(1.0)
         )
     }
+    
+}
+
+extension ChatViewController: UITableViewDelegate {
+    
+}
+
+extension ChatViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
+        cell.messageContent.text = messages[indexPath.row].content
+        cell.profileImage.image = messages[indexPath.row].sender.profilepic
+        cell.senderText.text = messages[indexPath.row].sender.name
+        cell.leftBufferView.isHidden = true
+        if messages[indexPath.row].sender.name == sender {
+            cell.bufferView.isHidden = true
+            cell.leftBufferView.isHidden = false
+            cell.messageBackground.backgroundColor = hexStringToUIColor(hex: "#3782A4")
+            cell.profileImage.alpha = 0
+            cell.senderText.isHidden = true
+            cell.messageContent.textColor = hexStringToUIColor(hex: "#FCFAF3")
+            
+        }
+        return cell
+    }
+    
+    
     
 }
 

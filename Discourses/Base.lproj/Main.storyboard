@@ -40,16 +40,16 @@
                                 <color key="backgroundColor" name="ClassLIstForegroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="L6u-Zh-qdf">
-                                <rect key="frame" x="20" y="84" width="374" height="40"/>
+                                <rect key="frame" x="30" y="84" width="364" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Courses" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsu-dx-meF">
-                                        <rect key="frame" x="0.0" y="0.0" width="274" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="40"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                         <color key="textColor" name="ClassLIstForegroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9v2-Gg-lgn">
-                                        <rect key="frame" x="299" y="0.0" width="30" height="40"/>
+                                        <rect key="frame" x="279" y="0.0" width="30" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="V3p-Q7-LfP"/>
                                             <constraint firstAttribute="height" constant="40" id="oWb-CL-Rza"/>
@@ -57,9 +57,9 @@
                                         <state key="normal" image="ChatButtonIcon"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBB-3t-Uf2">
-                                        <rect key="frame" x="354" y="0.0" width="20" height="40"/>
+                                        <rect key="frame" x="334" y="0.0" width="30" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="Azl-Pu-XOy"/>
+                                            <constraint firstAttribute="width" constant="30" id="Azl-Pu-XOy"/>
                                             <constraint firstAttribute="height" constant="40" id="ISi-OF-uWT"/>
                                         </constraints>
                                         <state key="normal" image="ThreeLines"/>
@@ -73,7 +73,7 @@
                             <constraint firstAttribute="bottom" secondItem="IuK-fL-5gz" secondAttribute="bottom" id="I1f-sX-HNu"/>
                             <constraint firstItem="IuK-fL-5gz" firstAttribute="top" secondItem="L6u-Zh-qdf" secondAttribute="bottom" constant="20" id="M1b-iL-m4B"/>
                             <constraint firstItem="L6u-Zh-qdf" firstAttribute="top" secondItem="rfG-o5-xhS" secondAttribute="top" constant="40" id="OId-Xg-6no"/>
-                            <constraint firstItem="L6u-Zh-qdf" firstAttribute="leading" secondItem="rfG-o5-xhS" secondAttribute="leading" constant="20" id="gkc-dX-I0L"/>
+                            <constraint firstItem="L6u-Zh-qdf" firstAttribute="leading" secondItem="rfG-o5-xhS" secondAttribute="leading" constant="30" id="gkc-dX-I0L"/>
                             <constraint firstItem="IuK-fL-5gz" firstAttribute="leading" secondItem="rfG-o5-xhS" secondAttribute="leading" id="hqX-pl-OVa"/>
                             <constraint firstItem="IuK-fL-5gz" firstAttribute="trailing" secondItem="rfG-o5-xhS" secondAttribute="trailing" id="suu-4Y-WNA"/>
                         </constraints>
@@ -83,6 +83,7 @@
                         <outlet property="addChatButton" destination="9v2-Gg-lgn" id="dNA-ow-NrH"/>
                         <outlet property="classListTable" destination="IuK-fL-5gz" id="PhN-xN-9St"/>
                         <outlet property="myCoursesLabel" destination="Vsu-dx-meF" id="0js-vN-bcm"/>
+                        <outlet property="threeLinesImage" destination="XBB-3t-Uf2" id="C0j-wO-Rjj"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="classlistToChat" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="L2G-Dw-DDW"/>
                     </connections>
                 </viewController>
@@ -143,7 +144,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="    Type here..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eI0-he-7XY">
-                                <rect key="frame" x="20" y="788" width="374" height="34"/>
+                                <rect key="frame" x="20" y="808" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="BrandForegroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -238,7 +239,7 @@
             <color red="0.94901960784313721" green="0.93725490196078431" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ClassListBackgroundColor">
-            <color red="0.10980392156862745" green="0.22745098039215686" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.10999999940395355" green="0.22699999809265137" blue="0.33700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
