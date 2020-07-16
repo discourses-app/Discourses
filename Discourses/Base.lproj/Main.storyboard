@@ -114,7 +114,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ChatViewController" customModule="Discourses" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-y0-XeS">
@@ -124,7 +124,7 @@
                                 <color key="sectionIndexBackgroundColor" name="BrandForegroundColor"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="dmW-JU-0de">
-                                <rect key="frame" x="20" y="69" width="374" height="35"/>
+                                <rect key="frame" x="20" y="25" width="374" height="35"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndx-Hs-VQs">
                                         <rect key="frame" x="0.0" y="0.0" width="41" height="35"/>
@@ -353,14 +353,6 @@
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3 bars" translatesAutoresizingMaskIntoConstraints="NO" id="oaC-II-wEI">
-                                <rect key="frame" x="20" y="68" width="38" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addButton" translatesAutoresizingMaskIntoConstraints="NO" id="RXT-y7-lRv">
-                                <rect key="frame" x="356" y="68" width="38" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-fK-LoD">
                                 <rect key="frame" x="0.0" y="222" width="414" height="674"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -381,6 +373,16 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uat-TU-cZ6">
+                                <rect key="frame" x="20" y="56" width="26" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtn:" destination="gcM-O2-CjB" eventType="touchUpInside" id="F6C-6D-WVh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960780000005" green="0.93725490199999995" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="z6A-KR-7Et"/>
@@ -388,10 +390,12 @@
                     <navigationItem key="navigationItem" id="J4u-0o-i6N"/>
                     <connections>
                         <outlet property="addClassLbl" destination="LKm-6D-AbA" id="yFJ-O1-yRf"/>
+                        <outlet property="backBtn" destination="Uat-TU-cZ6" id="WRp-UR-omj"/>
                         <outlet property="bgView" destination="Bmi-fK-LoD" id="U1n-EF-7Vj"/>
                         <outlet property="mainView" destination="cPS-7B-N9X" id="pIM-go-SHf"/>
                         <outlet property="searchBar" destination="zrL-DK-bQU" id="CZv-4W-0j0"/>
                         <outlet property="tableView" destination="ghW-1q-0cZ" id="BuJ-9z-Jni"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="toChatView" id="1jP-WC-qgv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bU4-Ih-wDB" sceneMemberID="firstResponder"/>
@@ -400,10 +404,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3 bars" width="25.5" height="22.5"/>
         <image name="BrandColoredLogo" width="107.5" height="91.5"/>
         <image name="Logo Idea #2" width="147" height="147"/>
-        <image name="addButton" width="30" height="30"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <namedColor name="BrandBackgroundColor">

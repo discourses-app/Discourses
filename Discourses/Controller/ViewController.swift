@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return filterdata.count
     }
     
+    @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var addClassLbl: UILabel!
     @IBOutlet weak var randBtn: UIButton!
@@ -36,6 +37,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        backBtn.setImage(#imageLiteral(resourceName: "backBtn"), for: .normal)
         bgView.layer.cornerRadius = 35
         bgView.layer.masksToBounds = true
         bgView.backgroundColor = #colorLiteral(red: 0.8117647059, green: 0.4352941176, blue: 0.1490196078, alpha: 1)
@@ -104,9 +106,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.cellForRow(at: indexPath)
         UIView.transition(with: (cell?.viewWithTag(1) as! UIImageView),
         duration: 0.75,
-        options: .transitionFlipFromTop,
-        animations: { (cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "doneAdding") },
+        options: .transitionCrossDissolve,
+        animations: { (cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "checkMark") },
         completion: nil)
+        let className = cell!.textLabel!.text!
+        print(className)
+        //ADD CLASS NAME TO personal LIST HERE
+        //self.performSegue(withIdentifier: "toChatView", sender: self)
         //(cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "doneAdding")
         selectedCell = indexPath
     }
