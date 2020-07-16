@@ -56,6 +56,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Acme-Regular.ttf</string>
+		<string>AirbnbCerealMedium.ttf</string>
+		<string>AirbnbCerealExtraBold.ttf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
