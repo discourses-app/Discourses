@@ -102,7 +102,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("This cell from the chat list was selected: \(indexPath.row)")
         let cell = tableView.cellForRow(at: indexPath)
-        (cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "doneAdding")
+        UIView.transition(with: (cell?.viewWithTag(1) as! UIImageView),
+        duration: 0.75,
+        options: .transitionFlipFromTop,
+        animations: { (cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "doneAdding") },
+        completion: nil)
+        //(cell?.viewWithTag(1) as! UIImageView).image = #imageLiteral(resourceName: "doneAdding")
         selectedCell = indexPath
     }
 
