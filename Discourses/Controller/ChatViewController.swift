@@ -13,7 +13,8 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var chatTable: UITableView!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var inputField: UITextField!
+
+    @IBOutlet weak var inputTextView: UITextView!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var professorLabel: UILabel!
     
@@ -43,17 +44,18 @@ class ChatViewController: UIViewController {
         chatTable.delegate = self
         chatTable.dataSource = self
 
-        //input text field set up
+        //input view field set up
+        inputTextView.delegate = self
         let attachmentButton = UIButton(type: .custom)
         attachmentButton.setImage(UIImage(systemName: "paperclip"), for: .normal)
         attachmentButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -16, bottom: 0, right: 0)
-        attachmentButton.frame = CGRect(x: 0, y: 0, width: ((inputField.frame.width)), height: ((inputField.frame.height)))
+        attachmentButton.frame = CGRect(x: 0, y: 0, width: ((inputTextView.frame.width)), height: ((inputTextView.frame.height)))
         attachmentButton.addTarget(self, action: #selector(self.attachmentButtonPressed(_:)), for: .touchUpInside)
-        inputField.rightView = attachmentButton
-        inputField.rightViewMode = .always
-        inputField.layer.masksToBounds = true
-        inputField.layer.cornerRadius = 15
-        
+//        inputTextView.rightView = attachmentButton
+//        inputField.rightViewMode = .always
+        inputTextView.layer.masksToBounds = true
+        inputTextView.layer.cornerRadius = 15
+        inputTextView.insertTextPlaceholder(with: CGSize(width: 10, height: 10))
         
         //menu button set up
         menuButton.setImage(
@@ -85,34 +87,7 @@ class ChatViewController: UIViewController {
         }
     }
     
-}
-
-extension ChatViewController: UITableViewDelegate {
-    
-}
-
-extension ChatViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        messages.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiveMessageIdentifier") as! ReceivedMessageCell
-        cell.messageContent.text = messages[indexPath.row].content
-        cell.profileImage.image = #imageLiteral(resourceName: "DiscoursesLogo")
-        cell.senderText.text = messages[indexPath.row].sender
-        
-        if messages[indexPath.row].sender == sender {
-            cell.bufferView.isHidden = true
-            cell.messageBackground.backgroundColor = hexStringToUIColor(hex: "#3782A4")
-            cell.profileImage.alpha = 0
-            cell.senderText.isHidden = true
-            cell.messageContent.textColor = hexStringToUIColor(hex: "#FCFAF3")
-        }
-        return cell
-    }
-    
-    
+    //MARK: - Helpers
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
@@ -136,4 +111,40 @@ extension ChatViewController: UITableViewDataSource {
     }
     
 }
+//MARK: - TextViewDelegate
+extension ChatViewController : UITextViewDelegate {
+    
+}
 
+//MARK: - TableViewDelegate
+
+extension ChatViewController: UITableViewDelegate {
+    
+}
+
+//MARK: - TableViewDataSource
+
+
+extension ChatViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReceiveMessageIdentifier") as! ReceivedMessageCell
+        cell.messageContent.text = messages[indexPath.row].content
+        cell.profileImage.image = #imageLiteral(resourceName: "DiscoursesLogo")
+        cell.senderText.text = messages[indexPath.row].sender
+        
+        if messages[indexPath.row].sender == sender {
+            cell.bufferView.isHidden = true
+            cell.messageBackground.backgroundColor = hexStringToUIColor(hex: "#3782A4")
+            cell.profileImage.alpha = 0
+            cell.senderText.isHidden = true
+            cell.messageContent.textColor = hexStringToUIColor(hex: "#FCFAF3")
+        }
+        return cell
+    }
+    
+    
+}
