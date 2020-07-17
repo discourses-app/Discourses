@@ -20,36 +20,27 @@
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ewe-KL-ABh">
                         <rect key="frame" x="10" y="10" width="451" height="127"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOF-wg-r0M">
-                                <rect key="frame" x="0.0" y="0.0" width="60" height="116"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Psf-Nr-oL7"/>
-                                </constraints>
-                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiscoursesLogo" translatesAutoresizingMaskIntoConstraints="NO" id="prX-sL-TCS" userLabel="Profile Image">
-                                <rect key="frame" x="70" y="0.0" width="40" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="RFj-CV-Nk3"/>
                                     <constraint firstAttribute="height" constant="40" id="eWe-7O-TiC"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="f6Y-G1-ScF" userLabel="Message Stack View">
-                                <rect key="frame" x="120" y="0.0" width="71" height="116"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="f6Y-G1-ScF" userLabel="Message Stack View">
+                                <rect key="frame" x="50" y="0.0" width="74" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-pK-ljk">
-                                        <rect key="frame" x="5" y="0.0" width="28.5" height="13.5"/>
+                                        <rect key="frame" x="8" y="0.0" width="28.5" height="13.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQ6-tz-Odj" userLabel="Message View">
-                                        <rect key="frame" x="5" y="23.5" width="66" height="92.5"/>
+                                        <rect key="frame" x="8" y="17.5" width="66" height="92.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXV-ks-Vhw" userLabel="Message Text">
                                                 <rect key="frame" x="12" y="12" width="42" height="68.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="3J3-fv-33E"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="MessageColorBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -58,7 +49,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="LXV-ks-Vhw" secondAttribute="trailing" constant="12" id="G2N-ZZ-ym5"/>
-                                            <constraint firstItem="LXV-ks-Vhw" firstAttribute="leading" secondItem="sQ6-tz-Odj" secondAttribute="leading" constant="12" id="Icp-0i-zz5"/>
+                                            <constraint firstItem="LXV-ks-Vhw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sQ6-tz-Odj" secondAttribute="leading" constant="12" id="Icp-0i-zz5"/>
                                             <constraint firstItem="LXV-ks-Vhw" firstAttribute="top" secondItem="sQ6-tz-Odj" secondAttribute="top" constant="12" id="LYS-uZ-ZLd"/>
                                             <constraint firstAttribute="bottom" secondItem="LXV-ks-Vhw" secondAttribute="bottom" constant="12" id="yLs-hq-OSd"/>
                                         </constraints>
@@ -69,10 +60,10 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tau-5v-0ha" userLabel="Buffer View">
-                                <rect key="frame" x="201" y="0.0" width="250" height="60"/>
+                                <rect key="frame" x="134" y="0.0" width="317" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="waL-6q-bce"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="waL-6q-bce"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -89,7 +80,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bufferView" destination="tau-5v-0ha" id="dBE-c1-hOB"/>
-                <outlet property="leftBufferView" destination="eOF-wg-r0M" id="0bJ-tS-vMU"/>
                 <outlet property="messageBackground" destination="sQ6-tz-Odj" id="h8t-qK-lxW"/>
                 <outlet property="messageContent" destination="LXV-ks-Vhw" id="kKV-ZU-BGY"/>
                 <outlet property="profileImage" destination="prX-sL-TCS" id="s0x-ax-kt1"/>

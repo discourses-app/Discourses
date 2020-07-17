@@ -17,11 +17,13 @@ struct Constants {
     struct CellIdentifiers {
         static let messageCell = "messageCellIdentifier"
         static let classBubble = "classBubbleIdentifier"
+        static let sentCell = "SentCellIdentifier"
     }
     
     struct CellStructNames {
         static let messageCell = "ReceivedMessageCell"
         static let classBubble = "ClassBubbleTableViewCell"
+        static let sentCell = "SentMessageCell"
     }
     
 }

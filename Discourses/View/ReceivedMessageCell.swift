@@ -34,11 +34,11 @@ class ReceivedMessageCell: UITableViewCell {
         messageBackground.layer.rasterizationScale = true ? UIScreen.main.scale : 1
 
         
-        messageContent.font = UIFont(name: "Cabin-Regular", size: 19)
+        messageContent.font = UIFont(name: "Cabin-Regular", size: 17)
         messageContent.textColor = hexStringToUIColor(hex: "#1C3A56")
         
         
-        senderText.font = UIFont(name: "Cabin-Regular", size: 13)
+        senderText.font = UIFont(name: "Cabin-Regular", size: 12)
         
         
         

@@ -39,20 +39,11 @@ class SubscribedClassesViewController: UIViewController {
         classListTable.dataSource = self
         classListTable.layer.cornerRadius = 43
         classListTable.register(UINib(nibName: Constants.CellStructNames.classBubble, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.classBubble)
-        
-//        threeLinesImage.frame = CGRect(
-//            x: threeLinesImage.layer.position.x,
-//            y: threeLinesImage.layer.position.y,
-//            width: threeLinesImage.frame.width,
-//            height: threeLinesImage.frame.height + 10)
-//        threeLinesImage.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-//        threeLinesImage.layer.masksToBounds = true
-//        threeLinesImage.sizeToFit()
+
         let image = #imageLiteral(resourceName: "ThreeLines").resized(to: CGSize(width: 25, height: 22))
         threeLinesImage.setImage(image, for: .normal)
         
-//        threeLinesImage.setImage(., for: .normal)
-        //label set up
+
         myCoursesLabel.font = UIFont(name: "AirbnbCerealApp-ExtraBold", size: 36)
     }
     

@@ -40,6 +40,8 @@
 		8FFA500824BA0C4800922D70 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA500724BA0C4800922D70 /* Message.swift */; };
 		8FFC03C724B8B12F0026991D /* Acme-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */; };
 		8FFC6CE024C0358700A41B95 /* UIImage-ResizeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CDF24C0358600A41B95 /* UIImage-ResizeExtension.swift */; };
+		8FFC6CE324C19F1F00A41B95 /* SentMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFC6CE124C19F1F00A41B95 /* SentMessageCell.swift */; };
+		8FFC6CE424C19F1F00A41B95 /* SentMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FFC6CE224C19F1F00A41B95 /* SentMessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		8FFA500724BA0C4800922D70 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8FFC03C624B8B12F0026991D /* Acme-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Acme-Regular.ttf"; sourceTree = "<group>"; };
 		8FFC6CDF24C0358600A41B95 /* UIImage-ResizeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-ResizeExtension.swift"; sourceTree = "<group>"; };
+		8FFC6CE124C19F1F00A41B95 /* SentMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMessageCell.swift; sourceTree = "<group>"; };
+		8FFC6CE224C19F1F00A41B95 /* SentMessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SentMessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 				8FB8224A24BACB2C000B4DBD /* ReceivedMessageCell.swift */,
 				8FBBD21424BF0392001ACA81 /* ClassBubbleTableViewCell.swift */,
 				8FBBD21524BF0392001ACA81 /* ClassBubbleTableViewCell.xib */,
+				8FFC6CE124C19F1F00A41B95 /* SentMessageCell.swift */,
+				8FFC6CE224C19F1F00A41B95 /* SentMessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				8FBBD21024BEF132001ACA81 /* AirbnbCerealBold.ttf in Resources */,
 				8F9E984624B9CB6900F5A756 /* OFL.txt in Resources */,
 				8F9E984124B9CB6900F5A756 /* Cabin-Bold.ttf in Resources */,
+				8FFC6CE424C19F1F00A41B95 /* SentMessageCell.xib in Resources */,
 				8FBBD20C24BEF132001ACA81 /* AirbnbCerealExtraBold.ttf in Resources */,
 				8FABF07924B7293E003B87E2 /* Assets.xcassets in Resources */,
 				8FBBD21124BEF132001ACA81 /* AirbnbCerealLight.ttf in Resources */,
@@ -302,6 +309,7 @@
 				8FBBD21924BF0964001ACA81 /* Constants.swift in Sources */,
 				8FABF07224B7293C003B87E2 /* SceneDelegate.swift in Sources */,
 				8FB8224C24BACB2C000B4DBD /* ReceivedMessageCell.swift in Sources */,
+				8FFC6CE324C19F1F00A41B95 /* SentMessageCell.swift in Sources */,
 				8FFC6CE024C0358700A41B95 /* UIImage-ResizeExtension.swift in Sources */,
 				8F9E983124B9591800F5A756 /* StartupViewController.swift in Sources */,
 				8FFA500824BA0C4800922D70 /* Message.swift in Sources */,

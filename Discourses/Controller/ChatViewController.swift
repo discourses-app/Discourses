@@ -21,7 +21,7 @@ class ChatViewController: UIViewController {
         Message(
             from: Sender(withName: "Janardhan", withProfilePic: #imageLiteral(resourceName: "BrandColoredLogo")),
             on: Date(timeIntervalSince1970: Date.timeIntervalSinceReferenceDate),
-            withMessage: "Hi, how are you jonathon"
+            withMessage: "Hi"
         ),
         Message(
             from: Sender(withName: "Jonathon", withProfilePic: #imageLiteral(resourceName: "DiscoursesLogo")),
@@ -57,16 +57,17 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
 
         //subject label set up
-        subjectLabel.font = UIFont(name: "Acme-Regular", size: 30)
+        subjectLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 30)
         subjectLabel.text = subjectLabel.text?.uppercased()
         
         //professor label set up
-        professorLabel.font = UIFont(name: "Cabin-Regular", size: 17)
+        professorLabel.font = UIFont(name: "AirbnbCerealApp-Book", size: 14)
         
         
         //chat table view set up
         chatTable.layer.cornerRadius = 40
         chatTable.register(UINib(nibName: Constants.CellStructNames.messageCell, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.messageCell)
+        chatTable.register(UINib(nibName: Constants.CellStructNames.sentCell, bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.sentCell)
         chatTable.delegate = self
         chatTable.dataSource = self
 
@@ -157,21 +158,34 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
-        cell.messageContent.text = messages[indexPath.row].content
-        cell.profileImage.image = messages[indexPath.row].sender.profilepic
-        cell.senderText.text = messages[indexPath.row].sender.name
-        cell.leftBufferView.isHidden = true
-        if messages[indexPath.row].sender.name == sender {
-            cell.bufferView.isHidden = true
-            cell.leftBufferView.isHidden = false
-            cell.messageBackground.backgroundColor = hexStringToUIColor(hex: "#3782A4")
-            cell.profileImage.alpha = 0
-            cell.senderText.isHidden = true
-            cell.messageContent.textColor = hexStringToUIColor(hex: "#FCFAF3")
-            
+//        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
+//        cell.messageContent.text = messages[indexPath.row].content
+//        cell.profileImage.image = messages[indexPath.row].sender.profilepic
+//        cell.senderText.text = messages[indexPath.row].sender.name
+//        cell.leftBufferView.isHidden = true
+//        if messages[indexPath.row].sender.name == sender {
+//            cell.bufferView.isHidden = true
+//            cell.leftBufferView.isHidden = false
+//            cell.messageBackground.backgroundColor = hexStringToUIColor(hex: "#3782A4")
+//            cell.profileImage.alpha = 0
+//            cell.senderText.isHidden = true
+//            cell.messageContent.textColor = hexStringToUIColor(hex: "#FCFAF3")
+//
+//        }
+//        return cell
+        
+        if sender == messages[indexPath.row].sender.name {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.sentCell) as! SentMessageCell
+            cell.contentLabel.text = messages[indexPath.row].content
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.messageCell) as! ReceivedMessageCell
+            cell.messageContent.text = messages[indexPath.row].content
+            cell.profileImage.image = messages[indexPath.row].sender.profilepic
+            cell.senderText.text = messages[indexPath.row].sender.name
+//            cell.leftBufferView.isHidden = true
+            return cell
         }
-        return cell
     }
     
     
